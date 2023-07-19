@@ -24,6 +24,8 @@ const NeoGrid = (): JSX.Element => {
         columnDefs={columnDefs}
         rowGroupPanelShow={'always'}
         defaultColDef={defaultColDef}
+        ensureDomOrder={true}
+        enableCellTextSelection={true}
       />
     </div>
   );

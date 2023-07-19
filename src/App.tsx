@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
-import NeoGrid from './Grid';
+import NeoGrid from './components/Grid/Grid';
 import Title from './components/Title/title';
 import { HeaderType } from './components/Title/title.types';
 import { APPLICATION_TITTLE } from './utils/constants'; 

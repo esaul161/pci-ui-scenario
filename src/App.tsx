@@ -1,17 +1,15 @@
-import { useEffect, useState, Dispatch, SetStateAction, createRef } from 'react';
+import { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import NeoGrid from './components/Grid/Grid';
-import { APPLICATION_TITTLE } from './utils/constants'; 
+import { APPLICATION_TITTLE } from './utils/constants';
 import { createContext } from 'react';
-import Header from './components/Header/header';
-
-export interface IInitialContext {clearFilters: boolean, setClearFilters: Dispatch<SetStateAction<boolean>>}
+import { IInitialContext } from './App.types';
+import Header from './components/Header/Header';
 
 export const Context = createContext<IInitialContext>({clearFilters: false, setClearFilters: ()=>{}});
 
 const App = () => {
-  const [clearFilters, setClearFilters] = useState(false)
-  const ref = createRef();
+  const [clearFilters, setClearFilters] = useState(false);
 
   useEffect(() => {
     document.title = APPLICATION_TITTLE;

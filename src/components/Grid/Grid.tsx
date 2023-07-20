@@ -6,8 +6,9 @@ import { useMemo, useRef, useCallback, useState } from 'react';
 import { columnDefs } from "./columns";
 import { AgGridReact as AgGridReactType } from 'ag-grid-react/lib/agGridReact';
 import { useContext, useEffect } from 'react';
-import { Context, IInitialContext } from "../../App";
+import { Context } from "../../App";
 import { ColumnState } from "ag-grid-community";
+import { IInitialContext } from "../../App.types";
 
 const NeoGrid = (): JSX.Element => {
   const gridRef = useRef<AgGridReactType>(null);
@@ -47,7 +48,7 @@ const NeoGrid = (): JSX.Element => {
 
 
   return (
-    <div className="ag-theme-alpine" style={{ height: 900, width: '100%' }}>
+    <div data-testid='grid-data' className="ag-theme-alpine" style={{ height: 900, width: '100%' }}>
       <AgGridReact
         ref={gridRef}
         gridOptions={gridOptions}

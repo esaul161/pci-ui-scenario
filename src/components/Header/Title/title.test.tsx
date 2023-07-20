@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import React from 'react';
-import Title from './title';
+import Title from './Title';
 import { HeaderType } from './title.types';
 
 describe('Title Test', () => {
